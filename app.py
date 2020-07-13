@@ -17,10 +17,11 @@ def search():
             no_of_videos = ytpl.total_videos()
             flash(no_of_videos)
             flash(time)
+            ytpl.reset_video_length()
         except:
             invalid['msg']='Sorry you entered an invalid link, try again!'
     return render_template('index.html', form=form, invalid=invalid)
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
