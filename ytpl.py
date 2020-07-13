@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 
 
 
-API_KEY = 'AIzaSyAPY3W05YbmBFAZ71CzBqxtezAC9So1PC8'
+API_KEY = 'your-api-key'
 
 token = 1
 
