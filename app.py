@@ -4,7 +4,7 @@ import ytpl
 from forms import Link
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '9021cbfa'
+app.config['SECRET_KEY'] = 'secretkey'
 
 
 @app.route('/', methods=['GET', 'POST'])
