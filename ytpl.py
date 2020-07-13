@@ -171,7 +171,11 @@ def playlist_duration_finder(pl_id):
     total_videos(totalvideos)
     total_time(totaltime)
 
-
+    
 def total_videos():
-    return f'Total number of videos in this playlist: {totalvideos}'
+    return f'Total number of videos in this playlist: {len(video_ids)}'
+
+def reset_video_length():
+    global video_ids
+    video_ids = []
 
