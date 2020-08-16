@@ -2,9 +2,11 @@ from flask import Flask, render_template, request, flash, redirect, url_for
 from datetime import datetime
 import ytpl
 from forms import Link
+import os
+
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'secretkey'
+app.config['SECRET_KEY'] = '9021cbfa'
 
 
 @app.route('/', methods=['GET', 'POST'])

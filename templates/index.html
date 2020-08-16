@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="HandheldFriendly" content="true">
-    <title>YouTube Playlist Duration</title>
+    <title>YouTube Playlist Duration Finder</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsAAAAAAAAARwAAADkAAAAAAAAAAAAAAAAAAAALAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAHYAAAC9AAAAAAAAAGMAAAC8AAAAAAAAAAAAAAAAAAAAvgAAAHkAAAAIAAAAAAAAAAAAAAABAAAATQAAANoAAAD+AAAAmAAAAAAAAAAVAAAA9gAAABUAAAAAAAAAAAAAAJEAAAD9AAAA3gAAAFQAAAABAAAArAAAAP8AAADJAAAARAAAAAAAAAAAAAAAAAAAALsAAABlAAAAAAAAAAAAAAAAAAAAMgAAALQAAAD/AAAAuAAAALgAAAD/AAAAtAAAADIAAAAAAAAAAAAAAAAAAABoAAAAuQAAAAAAAAAAAAAAAAAAAEQAAADJAAAA/wAAAKwAAAABAAAAVAAAAN4AAAD9AAAAkQAAAAAAAAAAAAAAFwAAAPYAAAAUAAAAAAAAAJkAAAD+AAAA2gAAAE0AAAABAAAAAAAAAAAAAAAIAAAAeQAAAL4AAAAAAAAAAAAAAAAAAADAAAAAYgAAAAAAAAC9AAAAdgAAAAcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALAAAAAAAAAAAAAAAAAAAAOwAAAEcAAAAAAAAACwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP//AAD//wAA//8AAPTvAADE4wAABGAAAARgAAAGIAAABiAAAMcjAAD3LwAA//8AAP//AAD//wAA//8AAA==" rel="icon" type="image/x-icon">
 </head>
 <body style="background-color: #E9ECEF">
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Youtube Playlist Duration Calculator</a>
+  <a class="navbar-brand" href="#">Youtube Playlist Duration Finder</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -39,7 +39,7 @@
 </nav>
 
     <div class="jumbotron">
-    <h1 class="display-4">Find the duration for a YouTube Playlist</h1>
+    <h1 class="display-4">Find the total duration for a YouTube Playlist</h1>
     <br>
 
     <form action="" method="POST" novalidate>
@@ -55,9 +55,9 @@
             </div></div>
         </p>
             <small class="form-text text-muted">If you dont know how to get the Playlist link you can go <a target=blank href="https://www.youtube.com/watch?v=yf-W4YT6WIk">here</a></small>
-            <small  class="form-text text-muted">OR <br>if you are using your phone you can simply go the playlist, tap on Share, Copy the link and Paste it here</small>
+            <small  class="form-text text-muted">OR <br>If you are using your phone you can simply <strong>go to the playlist, tap on Share, Copy the link and Paste it here</strong></small>
             <br>
-            <small  class="form-text text-muted">If total number of videos shown is less than the actual playlist, it might be due to some videos being Private!</small>
+            <small  class="form-text text-muted">If total number of videos shown is less than in the actual playlist, it might be due to some videos being Private!</small>
             </p>
             <hr>
             {%for error in form.link.errors%}

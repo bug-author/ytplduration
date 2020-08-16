@@ -7,22 +7,17 @@ import math
 from datetime import datetime, timedelta
 
 
+token = 1
+video_ids = []
 
 API_KEY = 'your-api-key'
-
-token = 1
-
-
 def append_video_ids(json_data):
-    global video_ids
-    video_ids = []
     json_data = json_data['items']
     for item in json_data:
         video_ids.append(item['contentDetails']['videoId'])
 
 
 def playlist_duration_finder(pl_id):
-
     # playlist ID
     if '=' in pl_id:
         pl_id = pl_id.split('=')
@@ -33,10 +28,9 @@ def playlist_duration_finder(pl_id):
     else:
         pl_id = pl_id
 
-
     # youtube api
 
-    youtube = build('youtube', 'v3', developerKey=API_KEY)
+    youtube = build('youtube', 'v3', developerKey = API_KEY)
 
     response=youtube.playlistItems().list(
         part='contentDetails, snippet',
@@ -143,9 +137,6 @@ def playlist_duration_finder(pl_id):
         m = math.floor((rem / 60))
         s = s % 60
 
-    global totalvideos
-    totalvideos = len(video_ids)
-
     entire_time = str(entire_time)
 
     # more than a day
@@ -156,7 +147,7 @@ def playlist_duration_finder(pl_id):
         m = entire_time[1].split(':')[1]
         s = entire_time[1].split(':')[2]
 
-        return  f'''Total playback time for the given playlist: {d}{h} hours {m} minutes {s} seconds'''
+        return f'''Total playback time for the given playlist: {d}{h} hours {m} minutes {s} seconds'''
 
     elif ':' in entire_time:
         h = entire_time.split(':')[0]
@@ -168,14 +159,11 @@ def playlist_duration_finder(pl_id):
     else:
         pass
 
-    total_videos(totalvideos)
-    total_time(totaltime)
 
-    
 def total_videos():
     return f'Total number of videos in this playlist: {len(video_ids)}'
+
 
 def reset_video_length():
     global video_ids
     video_ids = []
-
