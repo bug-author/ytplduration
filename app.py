@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, flash, redirect, url_for
 from datetime import datetime
 import ytpl
 from forms import Link
-import os
 
 
 app = Flask(__name__)
